@@ -1,20 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-
-    add_filter( 'admin_footer_text', 'zia3_rw_footer_text' );
-	add_filter( 'update_footer', 'zia3_rw_footer_version', 11 );
-
-	function zia3_rw_footer_text() {
-		$plugin_dir = plugins_url('zia3-rw/images/zia3_logo.png');
-        $default = '<br><p>&nbsp;</p><p><div class="zia3_rw_logo"><a href="http://zia3.com" title="Zia3"><img src="'. $plugin_dir .'" alt="Zia3"/></a></div></p>';
-	    return $default;
-	}
-
-	function zia3_rw_footer_version( ) {
-	    return '';
-	}
-
     global $wp_version;
 	$plugin = plugin_basename( __FILE__ );
 	$plugin_data = get_plugin_data( __FILE__, false );
